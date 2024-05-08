@@ -1,10 +1,31 @@
-<%- include("./header")  %> 
-    <p>Welcome to IMDB</p>
-    <hr>
-    <h3>To Watch:</h3>
-    <ul>
-      <li><a href="/movies">All Movies</a></li>
-      <li><a href="/movies/recommended">Recommended</a></li>
-      <li><a href="/movies/news">News</a></li>
-    </ul>
-<%- include("./footer")  %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMDB - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <% include("./header") %>
+    </header>
+
+    <main>
+        <section class="welcome-section">
+            <p>Welcome to IMDB</p>
+            <hr>
+            <h3>To Watch:</h3>
+            <ul>
+                <li><a href="/movies">All Movies</a></li>
+                <li><a href="/movies/recommended">Recommended</a></li>
+                <li><a href="/movies/news">News</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <% include("./footer") %>
+    </footer>
+</body>
+</html>
