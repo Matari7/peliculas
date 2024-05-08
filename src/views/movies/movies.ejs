@@ -31,7 +31,7 @@
             <div class="modal-header">
                 <h5 class="modal-title"></h5>
             </div>
-            <form id="formMovies">    
+            <form id="formMovies" action="/movies/<%= movies.id %>?_method=PUT " method="POST">    
                     <div class="modal-body">                
                         <input id="id" hidden>
 
@@ -108,7 +108,7 @@
             $('#modalCrud').modal('show');	    
         });    
         //EDITAR        
-        $(document).on("click", ".btnEditar", function(){		            
+       $(document).on("click", ".btnEditar", function(){		            
             opcion='editar';
             let data = $(this).parent().data("movie");
             console.log(data);
@@ -125,7 +125,7 @@
             $(".modal-title").text("Editar Artículo");		
             $('#modalCrud').modal('show');		   
         });
-
+       
      //BORRAR
         $(document).on("click", ".btnBorrar", function(){
             fila = $(this);           
